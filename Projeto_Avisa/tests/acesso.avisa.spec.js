@@ -17,8 +17,8 @@ test.describe('Backoffice - SISAMB', () => {
 test('Deve realizar login com sucesso', async ({ page }) => {
   
   await page.goto('https://bahia-test.pglsmais.com.br/sisamb/backoffice/');
-  await page.fill('input[name="username"]', 'adminBranef@branef.com.br');
-  await page.fill('input[name="password"]', 'Branef123@#');
+  await page.fill('input[name="username"]', process.env.USER_NAME);
+  await page.fill('input[name="password"]', process.env.PASSWORD);
   await page.locator('#password').screenshot({ path: 'screenshot/camposenha.png' });
   await page.getByRole('button', { name: 'Entrar' }).click();
   await expect(
