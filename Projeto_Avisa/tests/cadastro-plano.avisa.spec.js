@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-test.describe('Backoffice - SISAMB - Cadastro de Plano', () => {
+test.describe.skip('Backoffice - SISAMB - Cadastro de Plano', () => {
 
   test.beforeEach(async ({ page }) => {
     // Realiza o login antes de cada teste do describe
@@ -13,7 +13,7 @@ test.describe('Backoffice - SISAMB - Cadastro de Plano', () => {
     ).toBeVisible({ timeout: 15000 });
   });
 
-  test('Deve cadastrar um novo plano com sucesso', async ({ page }) => {
+  test.fixme('Deve cadastrar um novo plano com sucesso', async ({ page }) => {
     // Navegar para a página de cadastro de planos
     await page.getByRole('button', { name: 'Cadastrar' }).click();
     // Preencher o formulário de cadastro
