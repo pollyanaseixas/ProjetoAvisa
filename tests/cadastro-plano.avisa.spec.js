@@ -13,7 +13,7 @@ test.describe('Backoffice - SISAMB - Cadastro de Plano', () => {
     ).toBeVisible({ timeout: 15000 });
   });
 
-  test.only('Deve cadastrar um novo plano com sucesso', async ({ page }) => {
+  test('Deve cadastrar um novo plano com sucesso', async ({ page }) => {
     // Navegar para a página de cadastro de planos
     await page.getByRole('button', { name: 'Cadastrar' }).click();
     // Preencher o formulário de cadastro
