@@ -1,19 +1,19 @@
 import { test, expect } from '@playwright/test';
 
-test.describe.skip('Backoffice - SISAMB - Cadastro de Plano', () => {
+test.describe('Backoffice - SISAMB - Cadastro de Plano', () => {
 
   test.beforeEach(async ({ page }) => {
     // Realiza o login antes de cada teste do describe
     await page.goto('https://bahia-test.pglsmais.com.br/sisamb/backoffice/');
-    await page.fill('input[name="username"]', process.env.USER_NAME);
-    await page.fill('input[name="password"]', process.env.PASSWORD);
+    await page.fill('input[name="username"]', 'adminBranef@branef.com.br');
+    await page.fill('input[name="password"]', 'Branef123@#');
     await page.getByRole('button', { name: 'Entrar' }).click();
     await expect(
       page.getByRole('heading', { name: 'Planos de Ação' })
     ).toBeVisible({ timeout: 15000 });
   });
 
-  test.fixme('Deve cadastrar um novo plano com sucesso', async ({ page }) => {
+  test.only('Deve cadastrar um novo plano com sucesso', async ({ page }) => {
     // Navegar para a página de cadastro de planos
     await page.getByRole('button', { name: 'Cadastrar' }).click();
     // Preencher o formulário de cadastro
