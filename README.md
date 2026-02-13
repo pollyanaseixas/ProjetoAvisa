@@ -85,20 +85,6 @@ Projeto desenvolvido para fins de estudo e aprimoramento em automação de teste
 
 ---
 
-# 🎯 Próximo Passo
 
-1. Crie o arquivo:
-
-```bash
-touch README.md
-
-
-Cole o conteúdo
-
-Commit:
-
-git add README.md
-git commit -m "Adiciona README profissional"
-git push origin main
 
 
